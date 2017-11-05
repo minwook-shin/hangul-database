@@ -1,5 +1,5 @@
 # hangul-database
-Hangul (korean) collection, consonant mysql database conversion project
+Hangul (korean) vowel, consonant mysql database conversion project
 
 ## File description
 * hangul_all.sql : Consonant + vowel ko/eng Pronunciation data
