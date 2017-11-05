@@ -94,8 +94,29 @@ mysql> select * from `jo-sa`;
 +----+-----------+-------------------+-----------------+
 21 rows in set (0.00 sec)
 ```
+## Examples of data usage
+```
+mysql> select * from `ja-eum` where text = "ㄴ";
++----+------+---------------+-------------------+
+| id | Text | Pronunciation | Eng Pronunciation |
++----+------+---------------+-------------------+
+|  2 | ㄴ   | 니은          | N                 |
++----+------+---------------+-------------------+
+1 row in set (0.00 sec)
 
-## Usage guide
+mysql> select * from `mo-eum` where text = "ㅏ";
++----+------+---------------+-------------------+
+| id | Text | Pronunciation | Eng Pronunciation |
++----+------+---------------+-------------------+
+|  1 | ㅏ   | 아            | A                 |
++----+------+---------------+-------------------+
+1 row in set (0.00 sec)
+```
+```
+"ㄴ"+"ㅏ" = 나 | "N"+"A" = NA
+```
+
+## usage guide by language
 #### python : 
 ```
 import MySQLdb
