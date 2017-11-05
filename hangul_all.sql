@@ -16,6 +16,14 @@ CREATE TABLE `mo-eum` (
   `Eng Pronunciation` varchar(4) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+DROP TABLE IF EXISTS `josa`;
+CREATE TABLE `josa` (
+  `id` tinyint(4) NOT NULL AUTO_INCREMENT,
+  `Text` varchar(4) NOT NULL,
+  `Eng Pronunciation` varchar(7) NOT NULL,
+  `final consonant` varchar(3) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 INSERT INTO `hangul_db`.`ja-eum` (`ID`, `Text`, `Pronunciation`, `Eng Pronunciation`) VALUES ('1', 'ㄱ', '기역', 'G/K');
 INSERT INTO `hangul_db`.`ja-eum` (`ID`, `Text`, `Pronunciation`, `Eng Pronunciation`) VALUES ('2', 'ㄴ', '니은', 'N');
 INSERT INTO `hangul_db`.`ja-eum` (`ID`, `Text`, `Pronunciation`, `Eng Pronunciation`) VALUES ('3', 'ㄷ', '디귿', 'D/T');
@@ -56,7 +64,29 @@ INSERT INTO `hangul_db`.`mo-eum` (`ID`, `Text`, `Pronunciation`, `Eng Pronunciat
 INSERT INTO `hangul_db`.`mo-eum` (`ID`, `Text`, `Pronunciation`, `Eng Pronunciation`) VALUES ('19', "ㅞ", '웨', 'WE');
 INSERT INTO `hangul_db`.`mo-eum` (`ID`, `Text`, `Pronunciation`, `Eng Pronunciation`) VALUES ('20', 'ㅟ', '위', 'WI');
 INSERT INTO `hangul_db`.`mo-eum` (`ID`, `Text`, `Pronunciation`, `Eng Pronunciation`) VALUES ('21', 'ㅢ', '의', 'UI');
+INSERT INTO `hangul_db`.`josa` (`ID`, `Text`, `Eng Pronunciation`, `final consonant`) VALUES ('1', '은', '-EUN', 'Y');
+INSERT INTO `hangul_db`.`josa` (`ID`, `Text`, `Eng Pronunciation`, `final consonant`) VALUES ('2', '는', 'NEUN', 'N');
+INSERT INTO `hangul_db`.`josa` (`ID`, `Text`, `Eng Pronunciation`, `final consonant`) VALUES ('3', '이', '-I', 'Y');
+INSERT INTO `hangul_db`.`josa` (`ID`, `Text`, `Eng Pronunciation`, `final consonant`) VALUES ('4', '가', '-GA', 'N');
+INSERT INTO `hangul_db`.`josa` (`ID`, `Text`, `Eng Pronunciation`, `final consonant`) VALUES ('5', '을', '-EUL', 'Y');
+INSERT INTO `hangul_db`.`josa` (`ID`, `Text`, `Eng Pronunciation`, `final consonant`) VALUES ('6', '를', '-REUL', 'N');
+INSERT INTO `hangul_db`.`josa` (`ID`, `Text`, `Eng Pronunciation`, `final consonant`) VALUES ('7', '과', '-GWA', 'Y');
+INSERT INTO `hangul_db`.`josa` (`ID`, `Text`, `Eng Pronunciation`, `final consonant`) VALUES ('8', '와', '-WA', 'N');
+INSERT INTO `hangul_db`.`josa` (`ID`, `Text`, `Eng Pronunciation`, `final consonant`) VALUES ('9', '이랑', '-IRANG', 'Y');
+INSERT INTO `hangul_db`.`josa` (`ID`, `Text`, `Eng Pronunciation`, `final consonant`) VALUES ('10', '랑', '-RANG', 'N');
+INSERT INTO `hangul_db`.`josa` (`ID`, `Text`, `Eng Pronunciation`, `final consonant`) VALUES ('11', "으로", '-EURO', 'Y');
+INSERT INTO `hangul_db`.`josa` (`ID`, `Text`, `Eng Pronunciation`, `final consonant`) VALUES ('12', "로", '-RO', 'N');
+INSERT INTO `hangul_db`.`josa` (`ID`, `Text`, `Eng Pronunciation`, `final consonant`) VALUES ('13', "아", '-A', 'Y');
+INSERT INTO `hangul_db`.`josa` (`ID`, `Text`, `Eng Pronunciation`, `final consonant`) VALUES ('14', "야", '-YA', 'N');
+INSERT INTO `hangul_db`.`josa` (`ID`, `Text`, `Eng Pronunciation`, `final consonant`) VALUES ('15', '의', '-UI', 'Y/N');
+INSERT INTO `hangul_db`.`josa` (`ID`, `Text`, `Eng Pronunciation`, `final consonant`) VALUES ('16', '하고', '-HAGO', 'Y/N');
+INSERT INTO `hangul_db`.`josa` (`ID`, `Text`, `Eng Pronunciation`, `final consonant`) VALUES ('17', '도', '-DO', 'Y/N');
+INSERT INTO `hangul_db`.`josa` (`ID`, `Text`, `Eng Pronunciation`, `final consonant`) VALUES ('18', '에', '-E', 'Y/N');
+INSERT INTO `hangul_db`.`josa` (`ID`, `Text`, `Eng Pronunciation`, `final consonant`) VALUES ('19', '에게', '-EGE', 'Y/N');
+INSERT INTO `hangul_db`.`josa` (`ID`, `Text`, `Eng Pronunciation`, `final consonant`) VALUES ('20', '에서', '-ESEO', 'Y/N');
+INSERT INTO `hangul_db`.`josa` (`ID`, `Text`, `Eng Pronunciation`, `final consonant`) VALUES ('21', '에게서', '-EGESEO', 'Y/N');
 SELECT * FROM hangul_db.`ja-eum`;
 SELECT * FROM hangul_db.`mo-eum`;
+SELECT * FROM hangul_db.`josa`;
 
 commit;
