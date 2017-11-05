@@ -5,6 +5,7 @@ Hangul (korean) vowel, consonant mysql database conversion project
 * hangul_all.sql : Consonant + vowel ko/eng Pronunciation data
 * hangul_ja-eum.sql : Consonant ko/eng Pronunciation data
 * hangul_mo-eum.sql : vowel ko/eng Pronunciation data
+* hangul_jo-sa.sql : postposition eng Pronunciation data + final consonant boolean value
 
 ## test
 ```
@@ -62,6 +63,35 @@ mysql> select * from `mo-eum`;
 | 20 | ㅟ   | 위            | WI                |
 | 21 | ㅢ   | 의            | UI                |
 +----+------+---------------+-------------------+
+21 rows in set (0.00 sec)
+```
+```
+mysql> select * from `jo-sa`;
++----+-----------+-------------------+-----------------+
+| id | Text      | Eng Pronunciation | final consonant |
++----+-----------+-------------------+-----------------+
+|  1 | 은        | -EUN              | Y               |
+|  2 | 는        | NEUN              | N               |
+|  3 | 이        | -I                | Y               |
+|  4 | 가        | -GA               | N               |
+|  5 | 을        | -EUL              | Y               |
+|  6 | 를        | -REUL             | N               |
+|  7 | 과        | -GWA              | Y               |
+|  8 | 와        | -WA               | N               |
+|  9 | 이랑      | -IRANG            | Y               |
+| 10 | 랑        | -RANG             | N               |
+| 11 | 으로      | -EURO             | Y               |
+| 12 | 로        | -RO               | N               |
+| 13 | 아        | -A                | Y               |
+| 14 | 야        | -YA               | N               |
+| 15 | 의        | -UI               | Y/N             |
+| 16 | 하고      | -HAGO             | Y/N             |
+| 17 | 도        | -DO               | Y/N             |
+| 18 | 에        | -E                | Y/N             |
+| 19 | 에게      | -EGE              | Y/N             |
+| 20 | 에서      | -ESEO             | Y/N             |
+| 21 | 에게서    | -EGESEO           | Y/N             |
++----+-----------+-------------------+-----------------+
 21 rows in set (0.00 sec)
 ```
 
