@@ -28,3 +28,4 @@ INSERT INTO `hangul_db`.`ja-eum` (`ID`, `Text`, `Pronunciation`, `Eng Pronunciat
 INSERT INTO `hangul_db`.`ja-eum` (`ID`, `Text`, `Pronunciation`, `Eng Pronunciation`) VALUES ('18', 'ㅆ', '쌍시읏', 'SS'); 
 INSERT INTO `hangul_db`.`ja-eum` (`ID`, `Text`, `Pronunciation`, `Eng Pronunciation`) VALUES ('19', 'ㅉ', '쌍지읒', 'JJ');
 SELECT * FROM hangul_db.`ja-eum`;
+commit;

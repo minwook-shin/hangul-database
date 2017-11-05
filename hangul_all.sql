@@ -58,3 +58,5 @@ INSERT INTO `hangul_db`.`mo-eum` (`ID`, `Text`, `Pronunciation`, `Eng Pronunciat
 INSERT INTO `hangul_db`.`mo-eum` (`ID`, `Text`, `Pronunciation`, `Eng Pronunciation`) VALUES ('21', 'ㅢ', '의', 'UI');
 SELECT * FROM hangul_db.`ja-eum`;
 SELECT * FROM hangul_db.`mo-eum`;
+
+commit;
