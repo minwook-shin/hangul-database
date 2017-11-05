@@ -1,6 +1,11 @@
 # hangul-database
 Hangul (korean) collection, consonant mysql database conversion project
 
+## File description
+* hangul_all.sql : Consonant + vowel ko/eng Pronunciation data
+* hangul_ja-eum.sql : Consonant ko/eng Pronunciation data
+* hangul_mo-eum.sql : vowel ko/eng Pronunciation data
+
 ## test
 ```
 mysql> select * from `ja-eum`;
