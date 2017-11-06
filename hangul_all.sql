@@ -24,6 +24,14 @@ CREATE TABLE `jo-sa` (
   `final consonant` varchar(3) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+DROP TABLE IF EXISTS `pronoun`;
+CREATE TABLE `pronoun` (
+  `id` tinyint(4) NOT NULL AUTO_INCREMENT,
+  `Text` varchar(7) NOT NULL,
+  `Eng Pronunciation` varchar(21) NOT NULL,
+  `humble` varchar(3),
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 INSERT INTO `hangul_db`.`ja-eum` (`ID`, `Text`, `Pronunciation`, `Eng Pronunciation`) VALUES ('1', 'ㄱ', '기역', 'G/K');
 INSERT INTO `hangul_db`.`ja-eum` (`ID`, `Text`, `Pronunciation`, `Eng Pronunciation`) VALUES ('2', 'ㄴ', '니은', 'N');
 INSERT INTO `hangul_db`.`ja-eum` (`ID`, `Text`, `Pronunciation`, `Eng Pronunciation`) VALUES ('3', 'ㄷ', '디귿', 'D/T');
@@ -85,8 +93,20 @@ INSERT INTO `hangul_db`.`jo-sa` (`ID`, `Text`, `Eng Pronunciation`, `final conso
 INSERT INTO `hangul_db`.`jo-sa` (`ID`, `Text`, `Eng Pronunciation`, `final consonant`) VALUES ('19', '에게', '-EGE', 'Y/N');
 INSERT INTO `hangul_db`.`jo-sa` (`ID`, `Text`, `Eng Pronunciation`, `final consonant`) VALUES ('20', '에서', '-ESEO', 'Y/N');
 INSERT INTO `hangul_db`.`jo-sa` (`ID`, `Text`, `Eng Pronunciation`, `final consonant`) VALUES ('21', '에게서', '-EGESEO', 'Y/N');
+INSERT INTO `hangul_db`.`pronoun` (`ID`, `Text`, `Eng Pronunciation`, `humble`) VALUES ('1', '나', 'NA', '저');
+INSERT INTO `hangul_db`.`pronoun` (`ID`, `Text`, `Eng Pronunciation`, `humble`) VALUES ('2', '너', 'NEO', '당신');
+INSERT INTO `hangul_db`.`pronoun` (`ID`, `Text`, `Eng Pronunciation`, `humble`) VALUES ('3', '그(그녀)', 'GEU(GEUNYEO)','');
+INSERT INTO `hangul_db`.`pronoun` (`ID`, `Text`, `Eng Pronunciation`, `humble`) VALUES ('4', '우리', 'URI', '저희');
+INSERT INTO `hangul_db`.`pronoun` (`ID`, `Text`, `Eng Pronunciation`, `humble`) VALUES ('5', '너희', 'NEOHUI', '당신들');
+INSERT INTO `hangul_db`.`pronoun` (`ID`, `Text`, `Eng Pronunciation`, `humble`) VALUES ('6', '그들(그녀들)', 'GEUDEUL(GEUNYEODEUL)','');
+INSERT INTO `hangul_db`.`pronoun` (`ID`, `Text`, `Eng Pronunciation`, `humble`) VALUES ('7', '이', 'I-','');
+INSERT INTO `hangul_db`.`pronoun` (`ID`, `Text`, `Eng Pronunciation`, `humble`) VALUES ('8', '그', 'GEU-','');
+INSERT INTO `hangul_db`.`pronoun` (`ID`, `Text`, `Eng Pronunciation`, `humble`) VALUES ('9', '저', 'JEO-','');
+INSERT INTO `hangul_db`.`pronoun` (`ID`, `Text`, `Eng Pronunciation`, `humble`) VALUES ('10', '어느', 'EONEU','');
+
 SELECT * FROM hangul_db.`ja-eum`;
 SELECT * FROM hangul_db.`mo-eum`;
 SELECT * FROM hangul_db.`jo-sa`;
+SELECT * FROM hangul_db.`pronoun`;
 
 commit;
