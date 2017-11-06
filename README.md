@@ -94,8 +94,27 @@ mysql> select * from `jo-sa`;
 +----+-----------+-------------------+-----------------+
 21 rows in set (0.00 sec)
 ```
+```
+mysql> select * from `pronoun`;
++----+-------------------+----------------------+-----------+
+| id | Text              | Eng Pronunciation    | humble    |
++----+-------------------+----------------------+-----------+
+|  1 | 나                | NA                   | 저        |
+|  2 | 너                | NEO                  | 당신      |
+|  3 | 그(그녀)          | GEU(GEUNYEO)         |           |
+|  4 | 우리              | URI                  | 저희      |
+|  5 | 너희              | NEOHUI               | 당신들    |
+|  6 | 그들(그녀들)      | GEUDEUL(GEUNYEODEUL) |           |
+|  7 | 이                | I-                   |           |
+|  8 | 그                | GEU-                 |           |
+|  9 | 저                | JEO-                 |           |
+| 10 | 어느              | EONEU                |           |
++----+-------------------+----------------------+-----------+
+10 rows in set (0.00 sec)
+```
 ## Examples of data usage
 ```
+C:\Users> mysql --defaults-file=my.ini -uroot -p
 mysql> select * from `ja-eum` where text = "ㄴ";
 +----+------+---------------+-------------------+
 | id | Text | Pronunciation | Eng Pronunciation |
